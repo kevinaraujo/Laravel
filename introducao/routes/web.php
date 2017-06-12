@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/clientes','ClienteController@listar');
-
+Route::get('/clientes/listar','ClienteController@listar2');
 Route::get('/clientes/novo','ClienteController@novo');
+Route::get('/clientes/editar','ClienteController@editar');
