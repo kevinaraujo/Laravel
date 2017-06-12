@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/teste',function(){
-	return "RLSYSTEM";
-});
+Route::get('/clientes','ClienteController@listar');
 
-Route::get('/cadastro',function(){
-	return '';
-});
+Route::get('/clientes/novo','ClienteController@novo');
