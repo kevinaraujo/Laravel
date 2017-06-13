@@ -30,15 +30,23 @@
 			return view('listar2')->with('nomes',$nomes);
 		}
 		
-		public function editar(){
+		public function editar($id){
 			
-			if(is_numeric(Request::has('id'))){
+			/*if(Request::has('id')){
 				$id = Request::input('id');				
 			}else{
 				$id = 0;
 			}
 			
-			return view('editar')->with('id',$id);
+			//$id = Request::input('id',0);
+			$id = Request::route('id');*/
+			//URL
+			$url = Request::path();
+			$url = Request::url();
+			
+			return view('editar')
+					->with('id',$id)
+					->with('url',$url);
 		}
 		
 		
