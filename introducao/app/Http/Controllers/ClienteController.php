@@ -27,7 +27,8 @@
 		public function listar2(){
 			$nomes = array(1 => 'João',2 => 'Maria',3 => 'Pedro');
 			
-			return view('listar2')->with('nomes',$nomes);
+
+			return view('listar2')->with('nomes',$nomes)->with('nome','RL System');
 		}
 		
 		public function editar($id){
